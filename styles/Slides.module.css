@@ -1,0 +1,58 @@
+.slideColor {
+  padding: 14% 0;
+  background-color: var(--colorGlass);
+}
+
+.slide .imgSlide{
+width:20rem;
+margin: 0 auto;
+}
+
+.slide{
+  transform: scale(0.6);
+  transition: transform 300ms;
+  opacity: 0.5;
+  padding: 0;
+}
+
+.activeSlide{
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+
+
+.activeSlide {
+position: relative;
+}
+
+.activeSlide:before, .activeSlide:after {
+content: '';
+position: absolute;
+left: -1px;
+top: -1px;
+background: linear-gradient(45deg, #0ff, rgb(0, 195, 255), rgb(0, 132, 255), rgb(0, 119, 255), rgb(0, 60, 255), rgb(0, 17, 255), rgb(68, 0, 255), rgb(89, 0, 255), 
+rgb(68, 0, 255), rgb(0, 17, 255), rgb(0, 60, 255), rgb(0, 119, 255), rgb(0, 132, 255), rgb(0, 195, 255),
+rgb(0, 195, 255), rgb(0, 132, 255), rgb(0, 119, 255), rgb(0, 60, 255), rgb(0, 17, 255), rgb(68, 0, 255), rgb(89, 0, 255));
+background-size: 400%;
+width: calc(100% + 2px);
+height: calc(100% + 2px);
+z-index: -1;
+animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+0% {
+background-position: 0 0;
+}
+50% {
+background-position: 100% 0;
+}
+100% {
+background-position: 0 0;
+}
+}
+
+.activeSlide:after {
+filter: blur(10px);
+}

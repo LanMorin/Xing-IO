@@ -1,0 +1,14 @@
+.container {
+    background-color: var(--colorItem);
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: stretch;
+    justify-self: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}

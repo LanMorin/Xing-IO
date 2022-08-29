@@ -1,0 +1,12 @@
+.activeLink {
+    filter: invert(46%) sepia(81%) saturate(3586%) hue-rotate(166deg) brightness(102%) contrast(100%);
+}
+
+.disableLink {
+    filter: invert(35%) sepia(7%) saturate(17%) hue-rotate(5deg) brightness(104%) contrast(91%);
+}
+
+.iconContainer {
+    justify-self: center;
+    width: 2.5rem;
+}

@@ -1,0 +1,30 @@
+.containerBarMenu {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.barMenu {
+    background-color: red;
+    display: grid;
+    border-right: 2px solid var(--colorLed);
+}
+
+.barMenu ul {
+    align-items: center;
+    justify-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.barMenu ul a {
+    box-shadow: 4px 4px var(--colorMain);
+}
+
+/* Post design */
+.containerPost {
+    width: 100%;
+}
+
+.postBackground {
+ background-color: red;   
+}

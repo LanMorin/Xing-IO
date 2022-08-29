@@ -1,0 +1,240 @@
+/* Tab container */
+.tabs {
+  display: grid;
+  justify-items: center;
+}
+
+/* Tab navigation */
+.nav {
+  height: 10vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  align-items: center;
+  align-self: center;
+  padding: 2% 4%;
+  margin: 0;
+}
+ 
+.nav li {
+  width: 96%;
+  text-align: center;
+  cursor: pointer;
+  transition: all 1s;
+  background-color: var(--colorMain);
+  box-shadow: 12px 10px 10px #000000;
+  transform: skew(-40deg);
+  border: 1px solid var(--colorGlass);
+  display: grid;
+  padding: 6% 0;
+}
+ 
+.nav li:hover {
+  background: #22363d;
+}
+ 
+.nav li.active {
+  background: var(--colorActive);
+  border: 1px solid var(--colorGlass);
+  padding: 7% 0;
+}
+
+.nav li button.activeButton {
+  color: var(--colorLed);
+}
+
+.itemTab {
+  font-family: Altera2;
+  cursor: pointer;
+  color: var(--colorFill);
+  background: transparent;
+  transform: skew(40deg);
+  font-size: 1.4vw;
+  border: none;
+}
+ 
+/* Tab content styles */
+.blockContent {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+}
+
+.tabContent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
+  "subBlockContainer subBlockContent subBlockContent subBlockContent"
+  "subBlockInfo subBlockInfo subBlockInfo subBlockInfo";
+  align-items: center;
+  padding: 2% 1%;
+}
+
+/* Tab submenu */
+.subBlockContainer {
+  padding: 0 8%;
+  border-left: 4px solid var(--colorMain);
+  border-bottom: 2px solid var(--colorMain);
+  position: relative;
+  transition: 0.5s;
+  overflow: hidden;
+  margin-right: 4%;
+  grid-area: subBlockContainer;
+}
+
+.subBlockContainer span {
+    position: absolute;
+    display: block;
+}
+
+.subBlockContainer span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent, var(--colorLed));
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+
+.subBlockContainer span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent, var(--colorLed));
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+
+.subBlockContent {
+  grid-area: subBlockContent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tabContentNav {
+  cursor: pointer;
+  background-color: var(--colorMain);
+  color: var(--colorFill);
+  font-family: Altera2, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.2vw;
+  text-align: center;
+  padding: 5%;
+  clip-path: polygon(0 0, 90% 0, 100% 40%, 100% 100%, 10% 100%, 0 60%);
+  border: 3px solid var(--colorGlass);
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+.subActive {
+  color: var(--colorLed);
+  border: 3px ridge var(--colorGlass);
+  background-color: var(--colorActive);
+  transition: all 1s;
+  padding: 6% 0;
+}
+
+.subNavContent {
+  margin: 0;
+  padding: 0;
+}
+
+/* Tab submenu content */
+.bkgBlock {
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.tabContentItem {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  padding: 15%;
+  width: 100%;
+  background-color: var(--colorGlass);
+  color: #000000;
+  align-items: center;
+  border: 5px solid rgb(148, 148, 148);
+}
+
+.iFrameT {
+  width: 40vw;
+  height: 20vw;
+  border: 2px solid rgb(29, 29, 29);
+}
+
+.svgSocial {
+  width: 4vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* info content */
+.subBlockInfo {
+  display: grid;
+  grid-area: subBlockInfo;
+  padding: 0;
+  margin: 2% 0 0 0;
+}
+
+.infoGridBlock {
+  display: grid;
+}
+
+.infoReq {
+  background-color: var(--colorMain);
+  padding: 4%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  justify-items: center;
+
+  border-top: 20px solid var(--colorItem);
+}
+
+.infoReqText:first-child {
+  border-right: 2px solid var(--colorItem);
+}
+
+.infoReqText {
+  padding: 8%;
+  font-size: 2.5vh;
+}

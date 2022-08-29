@@ -1,0 +1,50 @@
+.mainContainer {
+    background-color: var(--colorGlass);
+}
+
+.gridLayout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "header header header header"
+    "main main main main"
+    "footer footer footer footer";
+}
+
+.bkgVideo {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.gridFooterLayout {
+  background-color: var(--colorItem);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.rightsReserved {
+  display: grid;
+  justify-self: left;
+  margin-left: 5%;
+}
+
+.gridFooterSocial {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-self: right;
+  gap: 10%;
+  margin-right: 5%;
+}
+
+.svgSocialFooter {
+  width: 60%;
+}

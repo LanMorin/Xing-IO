@@ -1,0 +1,31 @@
+.sectionText {
+    font-size: 2vw;
+    text-align: center;
+    font-family: Altera2;
+    color: var(--colorGlass);
+    width: auto;
+    margin: 1%;
+    border-top: 1px ridge var(--colorGlass);
+    border-bottom: 1px ridge var(--colorGlass);
+}
+
+.sectionText {
+  animation: flux 5s linear infinite;
+  -moz-animation: flux 5s linear infinite;
+  -webkit-animation: flux 5s linear infinite;
+  -o-animation: flux 5s linear infinite;
+}
+
+@keyframes flux {
+  0%,
+  100% {
+    color: var(--colorLed);
+    border-top: 1px ridge var(--colorLed);
+    border-bottom: 1px ridge var(--colorLed);
+  }
+  50% {
+    color: var(--colorOff);
+    border-top: 1px ridge var(--colorOff);
+    border-bottom: 1px ridge var(--colorOff);
+  }
+}
